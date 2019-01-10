@@ -24,10 +24,24 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
+paginate: 10
+paginate_path: "/blog/page:num/"
+permalink: date
+
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      comment: true
+      categories: blog
+
 # Build settings
+
 markdown: kramdown
 # theme: minima
-
 plugins:
   - jekyll-feed
   - jekyll-sitemap
